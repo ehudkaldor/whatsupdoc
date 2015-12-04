@@ -1,0 +1,36 @@
+<template bindable="router">
+  <div class="ui main text container">
+    <h1 class="ui header">
+      <p>STageS</p>
+    </h1>
+  </div>
+  <div class="ui borderless centered main menu">
+     <div class="ui text container">
+       <div href="#" class="header item">
+         <img class="logo" src="/images/foot-print.png">
+       </div>
+       <a repeat.for="row of router.navigation" class="ui ${row.isActive ? 'active' : ''} item" href.bind="row.href">${row.title}</a>
+       <div if.bind="row.settings.children" class="ui menu">
+         <a repeat.for="row of router.navigation" class="item ${row.isActive ? 'active' : ''}" href.bind="row.href" t="nav:${row.title}">${row.title}</a>
+       </div>
+        <a href="#" class="ui right floated dropdown item">
+         Dropdown <i class="dropdown icon"></i>
+         <div class="menu">
+           <div class="item">Link Item</div>
+           <div class="item">Link Item</div>
+           <div class="divider"></div>
+           <div class="header">Header Item</div>
+           <div class="item">
+             <i class="dropdown icon"></i>
+             Sub Menu
+             <div class="menu">
+               <div class="item">Link Item</div>
+               <div class="item">Link Item</div>
+             </div>
+           </div>
+           <div class="item">Link Item</div>
+         </div>
+       </a>
+     </div>
+   </div>
+</template>
