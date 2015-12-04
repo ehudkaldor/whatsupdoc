@@ -34,18 +34,6 @@ export class App {
         }
       },
       {
-        route: 'about',
-        name: 'about',
-        moduleId: 'about',
-        nav: true,
-        title: 'about',
-        settings: {
-          children: ['shlomit', 'janel', 'heather'],
-          parent: false,
-          side: 'secondary'
-        }
-      },
-      {
         route: 'services',
         name: 'services',
         moduleId: 'services',
@@ -55,31 +43,7 @@ export class App {
           children: [],
           parent: false
         }
-      },
-      {
-        route: 'users/login',
-        name: 'users/login',
-        moduleId: 'users/login',
-        nav: false,
-        title:'login',
-        settings: {
-          children: false,
-          parent: false
-        }
-      },
-      {
-        route: 'users/register',
-        name: 'users/register',
-        moduleId: 'users/register',
-        nav: false,
-        title:'register',
-        settings: {
-          children: false,
-          parent: false
-        }
       }
-      // { route: 'users/patients-list',     name: 'patients-list',    moduleId: 'users/patients-list',    nav: true, title:'patients list' },
-      // { route: 'users/patient',           name: 'patient',          moduleId: 'users/patient',          nav: true, title:'patient' }
     ]);
 
     this.router = router;
